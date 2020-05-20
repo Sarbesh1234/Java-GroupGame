@@ -14,7 +14,7 @@ public class MyWorld extends World
             asteroid[i] = new Asteroid();
             int asteroidX = Greenfoot.getRandomNumber(getWidth());
             int asteroidY = Greenfoot.getRandomNumber(getHeight()/5*3);
-            int random = Greenfoot.getRandomNumber(90) + 50;
+            int random = Greenfoot.getRandomNumber(30) + 20;
             addObject(asteroid[i],asteroidX,asteroidY);
             asteroid[i].getImage().scale(random, random);
         }

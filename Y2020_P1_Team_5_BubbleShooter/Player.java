@@ -3,7 +3,7 @@ public class Player extends Actor
 {
     GreenfootImage img = getImage();
     int life = 3;
-
+    
     public void act() 
     {
         int h = img.getHeight();
@@ -23,13 +23,7 @@ public class Player extends Actor
             setLocation(getX(), getY() + 5);
         }
 
-        if(getX()<=1) {
-            setLocation(getWorld().getWidth()-10,getY());
-        }
 
-        if(getX()>getWorld().getWidth()-5) {
-            setLocation(10,getY());
-        }
 
         if(getY()+h/2>getWorld().getHeight()) {
             setLocation(getX(),getWorld().getHeight()-h/2);

@@ -1,21 +1,26 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class TitleState here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class TitleState extends World
-{
+import greenfoot.*;
+public class TitleState extends State {
+    
+    private boolean spacePressed = false;
 
     /**
-     * Constructor for objects of class TitleState.
-     * 
+     * Constructor for objects of class TitleState
      */
-    public TitleState()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+    public TitleState(GameWorld g)
+    {
+        super(g);
+    }
+    
+    public void onSet() {
+        Text t = new Text();
+        getWorld().addObject(t,getWorld().getWidth()/2,getWorld().getHeight()/2);
+    }
+
+    public void onAct() {
+        if(Greenfoot.mouseClicked(null)) {
+            getWorld().setState(new GameState(getWorld()));
+        } ///else if(spacePressed) {
+            //spacePressed = false;
+        //}
     }
 }

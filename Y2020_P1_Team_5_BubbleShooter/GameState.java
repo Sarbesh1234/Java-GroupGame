@@ -1,4 +1,4 @@
- import greenfoot.*;
+import greenfoot.*;
 public class GameState extends State 
 {
     // instance variables - replace the example below with your own
@@ -17,7 +17,6 @@ public class GameState extends State
         getWorld().addObject(player, getWorld().getWidth()/2, getWorld().getHeight()-player.getImage().getHeight()/2);
         player.setRotation(-90); 
         player.getImage().scale(player.getImage().getWidth()/2, player.getImage().getHeight()/2);
-        
         
     }
 }

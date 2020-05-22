@@ -18,5 +18,8 @@ public class GameState extends State
         player.setRotation(-90); 
         player.getImage().scale(player.getImage().getWidth()/2, player.getImage().getHeight()/2);
         
+        if(Greenfoot.getRandomNumber(100) <= 40){
+            getWorld().addObject(new Asteroid(), Greenfoot.getRandomNumber(getWorld().getWidth()), 0);
+        }
     }
 }

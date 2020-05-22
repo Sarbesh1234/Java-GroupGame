@@ -8,7 +8,7 @@ public class Player extends Actor
     private int speed = 10;
     
     public void act(){
-        moveLaser();
+        movePlayer();
         outOfBounds();
         asteroidHit();
         shoot();
@@ -34,7 +34,7 @@ public class Player extends Actor
         }
     }
     
-    public void moveLaser(){
+    public void movePlayer(){
         if(Greenfoot.isKeyDown("left")){
             setLocation(getX() - speed, getY());
         }else if(Greenfoot.isKeyDown("right")){

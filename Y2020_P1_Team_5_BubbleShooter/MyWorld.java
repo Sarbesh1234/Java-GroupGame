@@ -1,22 +1,31 @@
-import greenfoot.*;
-public class MyWorld extends World
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class MyWorld here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class MyWorld extends GameWorld
 {
+
+    /**
+     * Constructor for objects of class MyWorld.
+     * 
+     */
     public MyWorld()
     {    
-        super(900, 900, 1);
-        Player player = new Player();
-        addObject(player, getWidth()/2, getHeight()-player.getImage().getHeight()/2);
-        player.setRotation(-90); 
-        player.getImage().scale(player.getImage().getWidth()/2, player.getImage().getHeight()/2);
-        Asteroid[] asteroid = new Asteroid[40];
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(900, 900, 1,true); 
         
-        for(int i=0; i<asteroid.length;i++) {
-            asteroid[i] = new Asteroid();
-            int asteroidX = Greenfoot.getRandomNumber(getWidth());
-            int asteroidY = Greenfoot.getRandomNumber(getHeight()/5*3);
-            int random = Greenfoot.getRandomNumber(30) + 20;
-            addObject(asteroid[i],asteroidX,asteroidY);
-            asteroid[i].getImage().scale(random, random);
-        }
+
+        
+
+        GameState g = new GameState(this);
+        
+        TitleState ts = new TitleState(this);
+        
+        setState(ts);
+
     }
 }

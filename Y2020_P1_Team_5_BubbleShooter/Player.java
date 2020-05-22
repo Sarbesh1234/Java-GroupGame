@@ -3,15 +3,12 @@ public class Player extends Actor
 {
     GreenfootImage img = getImage();
     int life = 3;
+    Boolean keydown = false;
     
-    public void act() 
-    {
+    public void act(){
+        
         int h = img.getHeight();
         int wi = img.getWidth();
-        
-        if(Greenfoot.isKeyDown("space")){
-            shoot();
-        }
 
         if(Greenfoot.isKeyDown("left")){
             setLocation(getX() - 5, getY());
@@ -23,8 +20,6 @@ public class Player extends Actor
             setLocation(getX(), getY() + 5);
         }
 
-
-
         if(getY()+h/2>getWorld().getHeight()) {
             setLocation(getX(),getWorld().getHeight()-h/2);
         }
@@ -33,21 +28,26 @@ public class Player extends Actor
         }
 
         asteroidHit();
-
-        if(life == 0){
-            getWorld().removeObject(this);
-            Greenfoot.stop(); 
-        }
+        shoot();
     }    
-
-    public void shoot() {
-        Laser l = new Laser();
-        getWorld().addObject(l, getX(), getY() - getImage().getHeight()/2);
-    }
 
     public void asteroidHit(){
         if(getOneIntersectingObject(Asteroid.class) != null){
             life = life - 1;
+        }
+        
+        if(life == 0){
+            getWorld().removeObject(this);
+            Greenfoot.stop(); 
+        }
+    }
+    
+    public void shoot(){
+        if(Greenfoot.isKeyDown("space")){
+            if(getWorld().getObjects(Laser.class).size() == 0){
+                Laser laser = new Laser();
+                getWorld().addObject(laser, getX(), getY() - getImage().getHeight()/2);
+            }
         }
     }
 }

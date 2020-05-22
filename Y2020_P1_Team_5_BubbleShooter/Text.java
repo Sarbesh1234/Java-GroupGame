@@ -13,6 +13,7 @@ public class Text extends Actor
     private Color foreground;
     private Color background;
     private Color outline;
+    private String text2;
     
     public Text() {
         text = "Click Anywhere To Start";
@@ -20,11 +21,9 @@ public class Text extends Actor
         foreground = Color.BLUE;
         background = Color.GREEN;
         outline = Color.RED;
-        
         updateImage();
-        
     }
-    
+ 
     public Text(String s) {
         text = s;
         font = 12;

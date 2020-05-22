@@ -23,12 +23,5 @@ public class MyWorld extends GameWorld
         TitleState ts = new TitleState(this);
         
         setState(ts);
-        
-        
-        
-        
-        
-        
-        
     }
 }

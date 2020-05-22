@@ -24,8 +24,6 @@ public class GameWorld extends World
     public void setState(State a) {
         if(s != null) {
             s.onRemove();
-            
-            
         }
         s = a;
         s.onSet();

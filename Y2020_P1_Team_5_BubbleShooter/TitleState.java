@@ -14,6 +14,7 @@ public class TitleState extends State {
     public void onSet() {
         Text t = new Text();
         getWorld().addObject(t,getWorld().getWidth()/2,getWorld().getHeight()/2);
+        
     }
 
     public void onAct() {

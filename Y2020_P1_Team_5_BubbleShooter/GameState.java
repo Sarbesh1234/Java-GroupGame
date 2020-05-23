@@ -18,5 +18,7 @@ public class GameState extends State
         player.setRotation(-90); 
         player.getImage().scale(player.getImage().getWidth()/2, player.getImage().getHeight()/2);
         
+        getWorld().addObject(new Text2(),150,800);
+        
     }
 }

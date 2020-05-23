@@ -1,18 +1,38 @@
 import greenfoot.*;
 public class Player extends Actor
 {
+    //Hello tessting
     GreenfootImage img = getImage();
     int life = 3; 
     int h = img.getHeight();
     int wi = img.getWidth();
     private int speed = 10;
     private int lasersLeft = 6;
+    private int x = -90;
+    private int y = -90;
+    
     public void act(){
         moveLaser();
         outOfBounds();
         asteroidHit();
         shoot();
-    }    
+        rotate();
+    }
+    
+    
+    
+    public void rotate() {
+        
+        if(Greenfoot.isKeyDown("a")) {
+            setRotation(x);
+            x-=10;
+        }
+        
+        if(Greenfoot.isKeyDown("d")) {
+            setRotation(x);
+            x+=10;
+        }
+    }
 
     public void asteroidHit(){
         if(getOneIntersectingObject(Asteroid.class) != null){
@@ -34,6 +54,7 @@ public class Player extends Actor
                 Laser laser = new Laser();
                 getWorld().addObject(laser, getX(), getY() - getImage().getHeight()/2);
                 lasersLeft--;
+                
                 
             }
             
@@ -59,8 +80,8 @@ public class Player extends Actor
         if(getY()+h/2>getWorld().getHeight()) {
             setLocation(getX(),getWorld().getHeight()-h/2);
         }
-        if(getY()-h/2<(getWorld().getHeight()/5)*4) {
-            setLocation(getX(),(getWorld().getHeight()/5)*4+h/2);
-        }
+        //if(getY()-h/2<(getWorld().getHeight())) {
+        //    setLocation(getX(),(getWorld().getHeight())+h/2);
+        //}
     }
 }

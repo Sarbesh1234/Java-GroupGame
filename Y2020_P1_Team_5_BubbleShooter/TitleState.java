@@ -6,6 +6,8 @@ public class TitleState extends State {
     /**
      * Constructor for objects of class TitleState
      */
+    
+    
     public TitleState(GameWorld g)
     {
         super(g);
@@ -15,6 +17,7 @@ public class TitleState extends State {
         Text t = new Text();
         getWorld().addObject(t,getWorld().getWidth()/2,getWorld().getHeight()/2);
         
+       
     }
 
     public void onAct() {

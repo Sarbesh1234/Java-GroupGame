@@ -6,6 +6,7 @@ public class Player extends Actor
     int h = img.getHeight();
     int wi = img.getWidth();
     private int speed = 10;
+    private int lasersLeft = 6;
     
     public void act(){
         movePlayer();
@@ -24,12 +25,18 @@ public class Player extends Actor
             Greenfoot.stop(); 
         }
     }
-
+    
     public void shoot(){
         if(Greenfoot.isKeyDown("space")){
+            
             if(getWorld().getObjects(Laser.class).size() == 0){
                 Laser laser = new Laser();
                 getWorld().addObject(laser, getX(), getY() - getImage().getHeight()/2);
+                lasersLeft--;
+            }
+            
+            if(lasersLeft == 0) {
+                Greenfoot.stop();
             }
         }
     }

@@ -18,10 +18,14 @@ public class MyWorld extends GameWorld
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 900, 1,true); 
         
+
+        
+
         GameState g = new GameState(this);
         
         TitleState ts = new TitleState(this);
         
         setState(ts);
+
     }
 }

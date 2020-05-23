@@ -1,7 +1,7 @@
 import greenfoot.*;
 public class Laser extends Actor{
     private int speed = 16;
-    private int lasersLeft = 5;
+    
     
     
     public void act(){

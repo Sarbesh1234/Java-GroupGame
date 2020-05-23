@@ -21,5 +21,7 @@ public class GameState extends State
         if(Greenfoot.getRandomNumber(100) <= 40){
             getWorld().addObject(new Asteroid(), Greenfoot.getRandomNumber(getWorld().getWidth()), 0);
         }
+        
+        getWorld().addObject(new Text2(),150,800);
     }
 }

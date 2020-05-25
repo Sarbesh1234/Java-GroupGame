@@ -6,7 +6,7 @@ public class Player extends Actor
     int life = 3; 
     int h = img.getHeight();
     int wi = img.getWidth();
-    private int speed = 8;
+    private int speed = 15;
     public static int lasersLeft = 6;
     
     
@@ -23,7 +23,6 @@ public class Player extends Actor
         
         if(Greenfoot.isKeyDown("a")) {
             setRotation(getRotation()-10);
-            
         }
         
         if(Greenfoot.isKeyDown("d")) {
@@ -38,7 +37,7 @@ public class Player extends Actor
 
     public void asteroidHit(){
         if(getWorld().getObjects(Text8.class).size() == 0) {
-            if(getOneIntersectingObject(Asteroid.class) != null){
+            if(getOneIntersectingObject(Level1Asteroid.class) != null){
             life = life - 1;
             //getWorld().removeObject(this);
             Greenfoot.setWorld(new GameOver());
@@ -46,12 +45,12 @@ public class Player extends Actor
         }
         
         if(getWorld().getObjects(Text9.class).size() == 0) {
-            if(getOneIntersectingObject(Asteroid2.class) !=null) {
+            if(getOneIntersectingObject(Level2Asteroid.class) !=null) {
                 life = life-1;
                 Greenfoot.setWorld(new GameOver());
             }
         }else {
-            if(getOneIntersectingObject(Astreroid3.class) !=null) {
+            if(getOneIntersectingObject(Level3Asteroid.class) !=null) {
                 life = life-1;
                 //getWorld().removeObject(this);
                 Greenfoot.setWorld(new GameOver());

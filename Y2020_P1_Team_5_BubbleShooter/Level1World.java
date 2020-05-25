@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class Level1World extends World
 {
 
     Counter counter = new Counter();
@@ -15,7 +15,7 @@ public class MyWorld extends World
         return counter;
     }
     
-    public MyWorld()
+    public Level1World()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 900, 1,true); 
@@ -38,16 +38,14 @@ public class MyWorld extends World
     
     
     
-    public void addAstroid(){
+    public void addAsteroid(){
         if(Greenfoot.getRandomNumber(100) <= 5){
-            addObject(new Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
+            addObject(new Level1Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
         }
     }
     
     public void act() {
-        addAstroid();
-        
-        
+        addAsteroid();
     }
 
     }

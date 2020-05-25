@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 
 
-public class MyWorld3 extends World
+public class Level3World extends World
 {
     Counter counter = new Counter();
     Player player = new Player();
@@ -23,7 +23,7 @@ public class MyWorld3 extends World
      * Constructor for objects of class MyWorld3.
      * 
      */
-    public MyWorld3()
+    public Level3World()
     
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -46,7 +46,7 @@ public class MyWorld3 extends World
     
      public void addAstroid(){
         if(Greenfoot.getRandomNumber(100) <= 40){
-            addObject(new Astreroid3(), Greenfoot.getRandomNumber(getWidth()), 0);
+            addObject(new Level3Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
         }
     }
     

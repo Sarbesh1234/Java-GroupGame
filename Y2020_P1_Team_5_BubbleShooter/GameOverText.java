@@ -14,6 +14,6 @@ public class GameOverText extends Actor
      */
     public void act() 
     {
-       setImage(new GreenfootImage("GAME OVER" , 175,Color.RED,Color.BLACK));
+       setImage(new GreenfootImage("GAME OVER" , 150,Color.RED,Color.BLACK));
     }    
 }

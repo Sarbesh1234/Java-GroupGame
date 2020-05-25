@@ -20,7 +20,7 @@ public class EvilPlayer extends Actor
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
             World world = getWorld();
-            MyWorld3 myWorld = (MyWorld3)world;
+            Level3World myWorld = (Level3World)world;
             HealthBar healthbar = myWorld.getHealthBar();
             healthbar.loseHealth();
         }

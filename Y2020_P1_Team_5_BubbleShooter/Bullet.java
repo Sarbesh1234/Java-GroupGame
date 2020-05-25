@@ -2,8 +2,6 @@ import greenfoot.*;
 public class Bullet extends Actor{
     private int speed = 10;
     
-    
-    
     public void act(){
         scaleImage();
         moveBullet();
@@ -17,7 +15,7 @@ public class Bullet extends Actor{
     }
     
     public void moveBullet(){
-        setLocation(getX(),getY()-10);
+        setLocation(getX(),getY()-speed);
     }
     
     public void outOfWorld(){

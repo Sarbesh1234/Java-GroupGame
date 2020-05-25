@@ -5,17 +5,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Astreroid3 extends Actor
+public class Level1Asteroid extends Actor
 {
-    private int speed = Greenfoot.getRandomNumber(10);
-    
+    private int speed = Greenfoot.getRandomNumber(3);
+    private int a = 0;
     public void collision() {
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
-            MyWorld3 myWorld = (MyWorld3)getWorld();
+            Level1World myWorld = (Level1World)getWorld();
             Counter counter = myWorld.getCounter();
             counter.addScore();
             getWorld().removeObject(this);
+            a++;
+            
+            //if(a == 20) {
+            //    Greenfoot.setWorld(new MyWorld());
+            //}
             
         }else {
             if(getY()>=getWorld().getHeight()-1) {
@@ -35,18 +40,15 @@ public class Astreroid3 extends Actor
     {
         moveAsteroid();
         collision();
-        
-        
+        scaleAsteroid();
     }
-    
-    
 
-    
-    
     public void moveAsteroid(){
         setLocation(getX(),getY() + speed + 1);
     }
     
-    
+    public void scaleAsteroid(){
+        this.getImage().scale(50,50);
+    }
 }
 

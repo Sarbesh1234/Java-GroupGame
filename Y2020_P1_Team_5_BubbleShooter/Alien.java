@@ -8,21 +8,23 @@
      */
     public class Alien extends Actor
     {
-        private int speed = 5;
-    public void Alien() {
+    private int speed = 5;
+    
+    public void rotateAlien() {
         setRotation(90);
     }
+    
     public void collision() {
         if(isTouching(Laser.class)) {
             if(getWorld().getObjects(Text9.class).size() == 0) {
                 removeTouching(Laser.class);
-                MyWorld2 myWorld = (MyWorld2)getWorld();
+                Level2World myWorld = (Level2World)getWorld();
                 Counter counter = myWorld.getCounter();
                    counter.addScore();
                 getWorld().removeObject(this);
             }else {
                 removeTouching(Laser.class);
-                MyWorld3 myWorld = (MyWorld3)getWorld();
+                Level3World myWorld = (Level3World)getWorld();
                 Counter counter = myWorld.getCounter();
                 counter.addScore();
                 getWorld().removeObject(this);
@@ -50,12 +52,11 @@
     {
         moveAlien();
         collision();
-        
+        rotateAlien();
         if(Greenfoot.getRandomNumber(100) == 1 && getWorld().getObjects(Text7.class).size() == 0) {
            EvilLaser l = new EvilLaser();
             getWorld().addObject(l, getX(), getY() - getImage().getHeight()/2);
         }
-        
     }
     
     

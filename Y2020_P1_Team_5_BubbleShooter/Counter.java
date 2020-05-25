@@ -21,9 +21,9 @@ public class Counter extends Actor
         
         if(score == 2) {
             if(getWorld().getObjects(Text8.class).size() == 0) {
-                Greenfoot.setWorld(new MyWorld2());
+                Greenfoot.setWorld(new Level2World());
             }else {
-                Greenfoot.setWorld(new MyWorld3());
+                Greenfoot.setWorld(new Level3World());
             }
             
         }

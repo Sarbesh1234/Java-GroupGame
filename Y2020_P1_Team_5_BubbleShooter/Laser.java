@@ -1,6 +1,6 @@
 import greenfoot.*;
 public class Laser extends Actor{
-    private int speed = 10;
+    private int speed = 20;
     boolean touchBaby = false;
     
     
@@ -19,12 +19,11 @@ public class Laser extends Actor{
         
         if(EvilPlayer!=null) {
             World world = getWorld();
-            MyWorld3 myWorld = (MyWorld3)world;
+            Level3World myWorld = (Level3World)world;
             HealthBar healthbar = myWorld.getHealthBar();
             healthbar.loseHealth();
-            
         }
-   }
+    }
     
     public void scaleImage(){
         if(getWorld().getObjects(Laser.class).size() > 0){

@@ -44,7 +44,7 @@ public class Level3World extends World
         return healthbar;
     }
     
-     public void addAstroid(){
+     public void addAsteroid(){
         if(Greenfoot.getRandomNumber(100) <= 40){
             addObject(new Level3Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
         }
@@ -58,7 +58,7 @@ public class Level3World extends World
     }
     
     public void act() {
-        addAstroid();
+        addAsteroid();
         addObject(healthbar,getWidth()/2,50);
         addAlien();
         

@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level2Asteroid extends Actor
 {
-    private int speed = Greenfoot.getRandomNumber(6);
+    private int speed = Greenfoot.getRandomNumber(7);
     
     public void collision() {
         

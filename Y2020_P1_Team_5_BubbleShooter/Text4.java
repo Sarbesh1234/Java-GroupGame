@@ -16,7 +16,7 @@ public class Text4 extends Actor
     private String text2;
     
     public Text4() {
-        text = "Use Arrow Keys to Move & Space Bar to Shoot";
+        text = "Use WASD to move";
         font = 45;
         foreground = Color.RED;
         background = Color.ORANGE;

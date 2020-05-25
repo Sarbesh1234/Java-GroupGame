@@ -16,7 +16,7 @@ public class Text6 extends Actor
     private String text2;
     
     public Text6() {
-        text = "Click Enter To Start Play";
+        text = "Click Enter To Start Game";
         font =20;
         foreground = Color.RED;
         background = Color.ORANGE;

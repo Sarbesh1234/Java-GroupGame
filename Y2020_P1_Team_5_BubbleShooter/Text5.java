@@ -16,7 +16,7 @@ public class Text5 extends Actor
     private String text2;
     
     public Text5() {
-        text = "Use A to Rotate Left, use D to Rotate Right & use S to Reset";
+        text = "Use Mouse to rotate and click Mouse to shoot";
         font = 25;
         foreground = Color.RED;
         background = Color.ORANGE;

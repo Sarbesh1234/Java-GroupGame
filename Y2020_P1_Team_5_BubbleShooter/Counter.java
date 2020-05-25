@@ -11,24 +11,22 @@ public class Counter extends Actor
     int score = 0;
     
     public Counter() {
-       setImage(new GreenfootImage("Score: " + score+"/30", 30,Color.PINK,Color.BLACK));       
+        setImage(new GreenfootImage("Score: " + score+"/20", 30,Color.PINK,Color.BLACK));       
     }
-    
-    
+
     public void act() 
     {
-        setImage(new GreenfootImage("Score: " + score+"/30", 30,Color.PINK,Color.BLACK));
-        
-        if(score == 2) {
+        setImage(new GreenfootImage("Score: " + score+"/20", 30,Color.PINK,Color.BLACK));
+
+        if(score == 20) {
             if(getWorld().getObjects(Text8.class).size() == 0) {
                 Greenfoot.setWorld(new Level2World());
             }else {
                 Greenfoot.setWorld(new Level3World());
             }
-            
         }
     }
-    
+
     public void addScore() {
         score++;
     }

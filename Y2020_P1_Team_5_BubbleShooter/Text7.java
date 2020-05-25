@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Cetipede here.
+ * Write a description of class Text7 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Centipede extends Actor
+public class Text7 extends Actor
 {
     /**
-     * Act - do whatever the Cetipede wants to do. This method is called whenever
+     * Act - do whatever the Text7 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
+        setImage(new GreenfootImage("Level 1", 30,Color.PINK,Color.BLACK));
     }    
 }

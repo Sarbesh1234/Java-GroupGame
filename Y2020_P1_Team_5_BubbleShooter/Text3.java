@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Text extends Actor
+public class Text3 extends Actor
 {
     private String text;
     private int font;
@@ -15,16 +15,16 @@ public class Text extends Actor
     private Color outline;
     private String text2;
     
-    public Text() {
-        text = "Click Enter to Play";
-        font = 55;
+    public Text3() {
+        text = "Click Space For Instructions";
+        font =30;
         foreground = Color.BLUE;
         background = Color.GREEN;
         //outline = Color.RED;
         updateImage();
     }
  
-    public Text(String s) {
+    public Text3(String s) {
         text = s;
         font = 12;
         foreground = Color.BLUE;

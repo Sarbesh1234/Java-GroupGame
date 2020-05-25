@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Text extends Actor
+public class Text4 extends Actor
 {
     private String text;
     private int font;
@@ -15,16 +15,16 @@ public class Text extends Actor
     private Color outline;
     private String text2;
     
-    public Text() {
-        text = "Click Enter to Play";
-        font = 55;
-        foreground = Color.BLUE;
-        background = Color.GREEN;
+    public Text4() {
+        text = "Use Arrow Keys to Move & Space Bar to Shoot";
+        font = 45;
+        foreground = Color.RED;
+        background = Color.ORANGE;
         //outline = Color.RED;
         updateImage();
     }
  
-    public Text(String s) {
+    public Text4(String s) {
         text = s;
         font = 12;
         foreground = Color.BLUE;

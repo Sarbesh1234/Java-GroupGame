@@ -6,16 +6,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class MyWorld2 extends World
 {
 
     Counter counter = new Counter();
     Player player = new Player();
+    Alien alien = new Alien();
     public Counter getCounter() {
         return counter;
     }
     
-    public MyWorld()
+    public MyWorld2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 900, 1,true); 
@@ -28,9 +29,11 @@ public class MyWorld extends World
         player.setRotation(-90); 
         player.getImage().scale(player.getImage().getWidth()/2, player.getImage().getHeight()/2);
         
-        Text7 t = new Text7();
+        Text8 t = new Text8();
         addObject(counter,75,56);
         addObject(t,75,90);
+        
+       
         //counter.setLocaation(69,32);
     }
     
@@ -39,15 +42,28 @@ public class MyWorld extends World
     
     
     public void addAstroid(){
-        if(Greenfoot.getRandomNumber(100) <= 5){
-            addObject(new Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
+        if(Greenfoot.getRandomNumber(100) <= 20){
+            addObject(new Asteroid2(), Greenfoot.getRandomNumber(getWidth()), 0);
+        }
+    }
+    
+    public void addAlien(){
+        if(Greenfoot.getRandomNumber(100) <= 2){
+            alien.setRotation(180); //Why no rotate...
+            addObject(new Alien(), Greenfoot.getRandomNumber(getWidth()), 0);
         }
     }
     
     public void act() {
         addAstroid();
+        addAlien();
         
-        
+    }
+    
+    public void pause() {
+        while(!Greenfoot.isKeyDown("enter")) {
+            Greenfoot.delay(1);
+        }
     }
 
     }

@@ -6,11 +6,10 @@ public class Player extends Actor
     int life = 3; 
     int h = img.getHeight();
     int wi = img.getWidth();
-    private int speed = 10;
-    private int lasersLeft = 6;
+    private int speed = 8;
+    public static int lasersLeft = 6;
     
-    private int x = -90;
-    private int y = -90;
+    
     
     public void act(){
         movePlayer();
@@ -23,24 +22,68 @@ public class Player extends Actor
     public void rotate() {
         
         if(Greenfoot.isKeyDown("a")) {
-            setRotation(x);
-            x-=10;
+            setRotation(getRotation()-10);
+            
         }
         
         if(Greenfoot.isKeyDown("d")) {
-            setRotation(x);
-            x+=10;
+            setRotation(getRotation()+10);
+            
+        }
+        
+        if(Greenfoot.isKeyDown("s")) {
+            setRotation(-90);
         }
     }
 
     public void asteroidHit(){
-        if(getOneIntersectingObject(Asteroid.class) != null){
+        if(getWorld().getObjects(Text8.class).size() == 0) {
+            if(getOneIntersectingObject(Asteroid.class) != null){
             life = life - 1;
+            //getWorld().removeObject(this);
+            Greenfoot.setWorld(new GameOver());
+        }   
         }
+        
+        if(getWorld().getObjects(Text9.class).size() == 0) {
+            if(getOneIntersectingObject(Asteroid2.class) !=null) {
+                life = life-1;
+                Greenfoot.setWorld(new GameOver());
+            }
+        }else {
+            if(getOneIntersectingObject(Astreroid3.class) !=null) {
+                life = life-1;
+                //getWorld().removeObject(this);
+                Greenfoot.setWorld(new GameOver());
+            }
+            
+            
+        }
+        
+        if(getOneIntersectingObject(Alien.class) != null) {
+            life = life-1;
+            //getWorld().removeObject(this);
+            Greenfoot.setWorld(new GameOver());
+        }
+        
+        if(getOneIntersectingObject(EvilLaser.class) != null) {
+            life = life-1;
+            //getWorld().removeObject(this);
+            Greenfoot.setWorld(new GameOver());
+        }
+            
+            
+  
+        
+        
+        
+        
+        
+        
 
         if(life == 0){
             getWorld().removeObject(this);
-            Greenfoot.stop(); 
+            Greenfoot.setWorld(new GameOver());
         }
     }
     
@@ -49,14 +92,24 @@ public class Player extends Actor
             
             if(getWorld().getObjects(Laser.class).size() == 0){
                 Laser laser = new Laser();
+                laser.setRotation(getRotation());
                 getWorld().addObject(laser, getX(), getY() - getImage().getHeight()/2);
-                lasersLeft--;
+                
+                //lasersLeft--;
             }
             
-            if(lasersLeft == 0) {
-                Greenfoot.stop();
-            }
+            
         }
+        
+        /*if(Greenfoot.isKeyDown("e")) {
+            if(getWorld().getObjects(Bomb.class).size() == 0){
+                Bomb b = new Bomb();
+                b.setRotation(getRotation());
+                getWorld().addObject(b, getX(), getY() - getImage().getHeight()/2);
+                
+                //lasersLeft--;
+            }
+        }*/
     }
     
     public void movePlayer(){

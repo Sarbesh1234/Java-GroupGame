@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Text extends Actor
+public class Text5 extends Actor
 {
     private String text;
     private int font;
@@ -15,16 +15,16 @@ public class Text extends Actor
     private Color outline;
     private String text2;
     
-    public Text() {
-        text = "Click Enter to Play";
-        font = 55;
-        foreground = Color.BLUE;
-        background = Color.GREEN;
+    public Text5() {
+        text = "Use A to Rotate Left, use D to Rotate Right & use S to Reset";
+        font = 25;
+        foreground = Color.RED;
+        background = Color.ORANGE;
         //outline = Color.RED;
         updateImage();
     }
  
-    public Text(String s) {
+    public Text5(String s) {
         text = s;
         font = 12;
         foreground = Color.BLUE;

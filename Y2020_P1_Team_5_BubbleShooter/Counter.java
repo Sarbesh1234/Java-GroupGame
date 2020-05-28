@@ -18,7 +18,7 @@ public class Counter extends Actor
     {
         setImage(new GreenfootImage("Score: " + score+"/20", 30,Color.PINK,Color.BLACK));
 
-        if(score == 20) {
+        if(score == 1) {
             if(getWorld().getObjects(Text8.class).size() == 0) {
                 Greenfoot.setWorld(new Level2World());
             }else {

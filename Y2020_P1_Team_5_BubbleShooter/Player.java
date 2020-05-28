@@ -64,7 +64,6 @@ public class Player extends Actor
 
     public void shoot(){
         MouseInfo m = Greenfoot.getMouseInfo();
-        
         if (Greenfoot.mouseClicked(null)) {
             if(getWorld().getObjects(Laser.class).size() == 0){
                 Laser laser = new Laser();

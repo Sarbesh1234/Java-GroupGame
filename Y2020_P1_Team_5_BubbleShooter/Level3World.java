@@ -13,7 +13,7 @@ public class Level3World extends World
     Counter counter = new Counter();
     Player player = new Player();
     Alien alien = new Alien();
-    EvilPlayer e = new EvilPlayer();
+    EvilStar e = new EvilStar();
     HealthBar healthbar = new HealthBar();
     public Counter getCounter() {
         return counter;

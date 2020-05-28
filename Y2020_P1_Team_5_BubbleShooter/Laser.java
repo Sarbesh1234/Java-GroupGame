@@ -15,9 +15,9 @@ public class Laser extends Actor{
     }
     
     public void collision() {
-        Actor EvilPlayer = getOneIntersectingObject(EvilPlayer.class);
+        Actor EvilStar = getOneIntersectingObject(EvilStar.class);
         
-        if(EvilPlayer!=null) {
+        if(EvilStar!=null) {
             World world = getWorld();
             Level3World myWorld = (Level3World)world;
             HealthBar healthbar = myWorld.getHealthBar();

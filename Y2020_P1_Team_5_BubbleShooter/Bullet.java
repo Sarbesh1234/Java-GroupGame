@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class Bullet extends Actor{
+public class Bullet extends EvilStar{
     private int speed = 10;
     
     public void act(){
@@ -10,7 +10,7 @@ public class Bullet extends Actor{
     
     public void scaleImage(){
         if(getWorld().getObjects(Laser.class).size() > 0){
-            this.getImage().scale(20,20);
+            this.getImage().scale(30,30);
         }
     }
     

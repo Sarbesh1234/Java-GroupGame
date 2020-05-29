@@ -9,13 +9,13 @@ public class Bullet extends EvilStar{
     }
     
     public void scaleImage(){
-        if(getWorld().getObjects(Laser.class).size() > 0){
+        if(getWorld().getObjects(Bullet.class).size() > 0){
             this.getImage().scale(30,30);
         }
     }
     
     public void moveBullet(){
-        setLocation(getX(),getY()-speed);
+        setLocation(getX(),getY()+speed);
     }
     
     public void outOfWorld(){

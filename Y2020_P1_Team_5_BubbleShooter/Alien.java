@@ -49,15 +49,12 @@ public class Alien extends Actor
         moveAlien();
         collision();
         rotateAlien(); 
-
         if(Greenfoot.getRandomNumber(100) == 1 && getWorld().getObjects(Text7.class).size() == 0) {
-            EvilLaser l = new EvilLaser();
+            AlienLaser l = new AlienLaser();
             getWorld().addObject(l, getX(), getY() - getImage().getHeight()/2);
         }
     }
 
-
-    
     public void moveAlien(){
         setLocation(getX(),getY() + speed + 1);
     }

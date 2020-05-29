@@ -15,9 +15,6 @@ public class InstructionsScreen extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 900, 1); 
         
-        
-        
-        
         Text4 t2 = new Text4();
         addObject(t2,450,300);
         

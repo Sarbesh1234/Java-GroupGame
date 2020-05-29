@@ -16,7 +16,7 @@ public class Counter extends Actor
 
     public void act() 
     {
-        setImage(new GreenfootImage("Score: " + score+"/20", 30,Color.PINK,Color.BLACK));
+        setImage(new GreenfootImage("Score: " + score+"/30", 30,Color.PINK,Color.BLACK));
 
         if(score == 1) {
             if(getWorld().getObjects(Text8.class).size() == 0) {

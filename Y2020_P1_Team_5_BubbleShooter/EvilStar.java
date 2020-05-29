@@ -11,11 +11,11 @@ public class EvilStar extends Actor
     private int dx = 5;
     public void act() 
     {
-        //setLocation(Greenfoot.getRandomNumber(900),getY());
-
-        //Bullet b = new Bullet();
-        //b.setRotation(getRotation());
-        //getWorld().addObject(b, getX(), getY() - getImage().getHeight()/2);
+        if(Greenfoot.getRandomNumber(100) <= 4){
+            Bullet b = new Bullet();
+            b.setRotation(getRotation());
+            getWorld().addObject(b, getX(), getY() - getImage().getHeight()/2);
+        }
 
         touchLaser();
         moveBoss();

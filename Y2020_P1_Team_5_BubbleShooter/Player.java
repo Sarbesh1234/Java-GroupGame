@@ -3,16 +3,15 @@ public class Player extends Actor
 {
     //Hello tessting
     GreenfootImage img = getImage();
-    int life = 3; 
+    public int life = 10; 
     int h = img.getHeight();
     int wi = img.getWidth();
     private int speed = 15;
-    public static int lasersLeft = 6;
 
     public void act(){
         movePlayer();
         outOfBounds();
-        asteroidHit();
+        hitObjects();
         shoot();
         rotate();
     }
@@ -24,41 +23,34 @@ public class Player extends Actor
         }
     }
 
-    public void asteroidHit(){
+    public void hitObjects(){
         if(getWorld().getObjects(Text8.class).size() == 0) {
             if(getOneIntersectingObject(Level1Asteroid.class) != null){
                 life = life - 1;
-                Greenfoot.setWorld(new GameOver());
-            }   
+                removeTouching(Level1Asteroid.class);
+            }
         }
 
         if(getWorld().getObjects(Text9.class).size() == 0) {
             if(getOneIntersectingObject(Level2Asteroid.class) !=null) {
-                life = life-1;
-                Greenfoot.setWorld(new GameOver());
+                life = life - 2;
+                removeTouching(Level2Asteroid.class);
             }
         }else {
             if(getOneIntersectingObject(Level3Asteroid.class) !=null) {
-                life = life-1;
-                //getWorld().removeObject(this);
-                Greenfoot.setWorld(new GameOver());
+                life = life - 3;
+                removeTouching(Level3Asteroid.class);
             }
         }
-        
+
         if(getOneIntersectingObject(Alien.class) != null) {
-            life = life-1;
-            //getWorld().removeObject(this);
-            Greenfoot.setWorld(new GameOver());
+            life = life - 2;
+            removeTouching(Alien.class);
         }
 
-        if(getOneIntersectingObject(EvilLaser.class) != null) {
-            life = life-1;
-            Greenfoot.setWorld(new GameOver());
-        }
-
-        if(life == 0){
-            getWorld().removeObject(this);
-            Greenfoot.setWorld(new GameOver());
+        if(getOneIntersectingObject(AlienLaser.class) != null) {
+            life = life - 1;
+            removeTouching(AlienLaser.class);
         }
     }
 

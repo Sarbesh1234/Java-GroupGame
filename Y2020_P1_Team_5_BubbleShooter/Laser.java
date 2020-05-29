@@ -1,7 +1,6 @@
 import greenfoot.*;
 public class Laser extends Actor{
     private int speed = 20;
-    boolean touchBaby = false;
     
     
     public void act(){
@@ -9,9 +8,6 @@ public class Laser extends Actor{
         moveLaser();
         outOfWorld();
         
-        //if(getWorld().getObjects(Text7.class).size() == 0) {
-        //   collision();
-        //}
     }
     
     public void collision() {

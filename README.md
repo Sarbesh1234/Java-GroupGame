@@ -1,10 +1,10 @@
 # README #
 
-**Names:**	Student 1, Student 2, Student 3
+**Names:**	Sarbesh 1, Nameer 2, Sriram 3
 
-**Group:** Your Group Number
+**Group:** 5
 
-**Period:**	Your Period
+**Period:**	1
 
 **Game Title:** Your Title (can always change it later)
 
@@ -13,6 +13,8 @@
 Write a paragraph here describing the game you want to make.  Describe how it is played and which features
 you want to include in your game.  Remember, any simple game can be scaled up with features and any complex
 game can be scaled down.
+
+A astroid shooter game, with multipile levels and enemies. And a boss
 
 Game Controls:
 

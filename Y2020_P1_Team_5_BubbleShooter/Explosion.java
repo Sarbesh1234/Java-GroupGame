@@ -12,8 +12,14 @@ public class Explosion extends ExplodingBomb
      * Act - do whatever the Explosion wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+
+    public Explosion(){
+        GreenfootImage img = getImage();
+        img.scale(50,50);
+        setImage(img);
+    }
+
     public void act() 
     {
-        this.getImage().scale(50,50);
     }    
 }

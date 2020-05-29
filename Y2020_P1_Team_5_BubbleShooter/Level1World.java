@@ -18,8 +18,9 @@ public class Level1World extends World
     public Level1World()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        
         super(900, 900, 1,true); 
-
+        setPaintOrder(Foreground.class);
             
         
         addObject(player, getWidth()/2, getHeight()-player.getImage().getHeight()/2);

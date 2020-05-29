@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class InstructionsScreen here.
  * 
@@ -23,8 +22,6 @@ public class InstructionsScreen extends World
         
         Text6 t4 = new Text6();
         addObject(t4,450,500);
-        
-        
     }
     
     public void act() {

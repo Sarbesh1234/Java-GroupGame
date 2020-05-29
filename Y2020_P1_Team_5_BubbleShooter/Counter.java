@@ -22,7 +22,7 @@ public class Counter extends Actor
             if(getWorld().getObjects(Text8.class).size() == 0) {
                 Greenfoot.setWorld(new Level2World());
             }else {
-                Greenfoot.setWorld(new Level3World());
+                Greenfoot.setWorld(new Level4World());
             }
         }
     }

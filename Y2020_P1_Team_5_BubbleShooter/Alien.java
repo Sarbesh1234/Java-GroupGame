@@ -24,7 +24,7 @@ public class Alien extends Actor
                 getWorld().removeObject(this);
             }else {
                 removeTouching(Laser.class);
-                Level3World myWorld = (Level3World)getWorld();
+                Level4World myWorld = (Level4World)getWorld();
                 Counter counter = myWorld.getCounter();
                 counter.addScore();
                 getWorld().removeObject(this);
@@ -35,24 +35,13 @@ public class Alien extends Actor
                 getWorld().removeObject(this);
             }
         }
-
-    
-        /*if(isTouching(Bomb.class)) {
-        removeTouching(Laser.class);
-        getWorld().removeObject(this);
-        }*/
-
     }
-    
+
     public void act() 
     {
         moveAlien();
         collision();
         rotateAlien(); 
-        if(Greenfoot.getRandomNumber(100) == 1 && getWorld().getObjects(Text7.class).size() == 0) {
-            AlienLaser l = new AlienLaser();
-            getWorld().addObject(l, getX(), getY() - getImage().getHeight()/2);
-        }
     }
 
     public void moveAlien(){

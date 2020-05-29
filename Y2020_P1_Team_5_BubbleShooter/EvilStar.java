@@ -40,7 +40,7 @@ public class EvilStar extends Actor
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
             World world = getWorld();
-            Level3World myWorld = (Level3World)world;
+            Level4World myWorld = (Level4World)world;
             HealthBar healthbar = myWorld.getHealthBar();
             healthbar.loseHealth();
         }

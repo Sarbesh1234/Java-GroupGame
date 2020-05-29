@@ -33,13 +33,13 @@ public class Player extends Actor
 
         if(getWorld().getObjects(Text9.class).size() == 0) {
             if(getOneIntersectingObject(Level2Asteroid.class) !=null) {
-                life = life - 2;
+                life = life - 1;
                 removeTouching(Level2Asteroid.class);
             }
         }else {
-            if(getOneIntersectingObject(Level3Asteroid.class) !=null) {
+            if(getOneIntersectingObject(Level4Asteroid.class) !=null) {
                 life = life - 3;
-                removeTouching(Level3Asteroid.class);
+                removeTouching(Level4Asteroid.class);
             }
         }
 
@@ -47,20 +47,22 @@ public class Player extends Actor
             life = life - 2;
             removeTouching(Alien.class);
         }
-
-        if(getOneIntersectingObject(AlienLaser.class) != null) {
-            life = life - 1;
-            removeTouching(AlienLaser.class);
-        }
     }
 
     public void shoot(){
         MouseInfo m = Greenfoot.getMouseInfo();
         if (Greenfoot.mouseClicked(null)) {
-            if(getWorld().getObjects(Laser.class).size() == 0){
-                Laser laser = new Laser();
-                laser.setRotation(getRotation());
-                getWorld().addObject(laser, getX(), getY() - getImage().getHeight()/2);
+            if(getWorld().getObjects(Laser.class).size() == 0 && 
+            getWorld().getObjects(ExplodingBomb.class).size() == 0){
+                if(Greenfoot.getRandomNumber(100) < 1){
+                    ExplodingBomb ebomb = new ExplodingBomb();
+                    ebomb.setRotation(getRotation());
+                    getWorld().addObject(ebomb, getX(), getY() - getImage().getHeight()/2);
+                } else {
+                    Laser laser = new Laser();
+                    laser.setRotation(getRotation());
+                    getWorld().addObject(laser, getX(), getY() - getImage().getHeight()/2);
+                }
             }
         }
     }

@@ -6,6 +6,21 @@ public class Bullet extends EvilStar{
         scaleImage();
         moveBullet();
         outOfWorld();
+        collision();
+    }
+    
+    public void collision() {
+        if(isTouching(Laser.class)) {
+            if(getWorld().getObjects(Text10.class).size() == 0) {
+                removeTouching(Laser.class);
+                getWorld().removeObject(this);
+            }
+
+        }else {
+            if(getY()>=getWorld().getHeight()-30) {
+                getWorld().removeObject(this);
+            }
+        }
     }
     
     public void scaleImage(){

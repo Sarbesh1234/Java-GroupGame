@@ -18,7 +18,7 @@ public class Alien extends Foreground
         if(isTouching(Laser.class)) {
             if(getWorld().getObjects(Text9.class).size() == 0) {
                 removeTouching(Laser.class);
-                Level2World myWorld = (Level2World)getWorld();
+                Level3World myWorld = (Level3World)getWorld();
                 Counter counter = myWorld.getCounter();
                 counter.addScore();
                 getWorld().removeObject(this);

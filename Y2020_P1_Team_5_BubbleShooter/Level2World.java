@@ -12,8 +12,13 @@ public class Level2World extends World
     Counter counter = new Counter();
     Player player = new Player();
     Alien alien = new Alien();
+    Lives l = new Lives();
     public Counter getCounter() {
         return counter;
+    }
+    
+    public Lives getLives() {
+        return l;
     }
 
     public Level2World()
@@ -30,6 +35,7 @@ public class Level2World extends World
         Text8 t = new Text8();
         addObject(counter,75,56);
         addObject(t,75,90);
+        addObject(l,90,800);
 
         //counter.setLocaation(69,32);
     }
@@ -51,7 +57,7 @@ public class Level2World extends World
 
     public void act() {
         addAsteroid();
-        addAlien();
+        //addAlien();
 
     }
 }

@@ -13,9 +13,14 @@ public class Level1World extends World
     Player player = new Player();
     Background back = new Background();
     Background back2 = new Background();
+    Lives l = new Lives();
 
     public Counter getCounter() {
         return counter;
+    }
+    
+     public Lives getLives() {
+        return l;
     }
 
     public Level1World()
@@ -32,6 +37,7 @@ public class Level1World extends World
 
         Text7 t = new Text7();
         addObject(counter,75,56);
+        addObject(l,90,800);
         addObject(t,75,90);
 
         addObject(back, getWidth()/2, getHeight()/2);

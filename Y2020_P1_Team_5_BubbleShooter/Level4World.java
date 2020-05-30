@@ -15,9 +15,13 @@ public class Level4World extends World
     EvilStar e = new EvilStar();
     HealthBar healthbar = new HealthBar();
     public int evilStarY = 50;
-    
+    Lives l = new Lives();
     public Counter getCounter() {
         return counter;
+    }
+    
+    public Lives getLives() {
+        return l;
     }
 
     /**
@@ -38,6 +42,7 @@ public class Level4World extends World
 
         Text9 t = new Text9();
         addObject(t,75,90);
+        addObject(l,90,800);
     }
 
     public HealthBar getHealthBar() {

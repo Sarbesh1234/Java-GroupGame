@@ -16,7 +16,6 @@ public class Level1Asteroid extends Foreground
             Counter counter = myWorld.getCounter();
             counter.addScore();
             getWorld().removeObject(this);
-            a++;
         } else if(isTouching(ExplodingBomb.class)){
             removeTouching(ExplodingBomb.class);
             Level1World myWorld = (Level1World)getWorld();

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Text7 extends Actor
+public class Text7 extends Foreground
 {
     /**
      * Act - do whatever the Text7 wants to do. This method is called whenever

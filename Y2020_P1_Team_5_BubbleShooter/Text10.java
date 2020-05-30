@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Text10 extends Actor
+public class Text10 extends Foreground
 {
     private String text;
     private int font;

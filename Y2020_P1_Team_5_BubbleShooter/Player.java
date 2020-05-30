@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class Player extends Actor
+public class Player extends Foreground
 {
     //Hello tessting
     GreenfootImage img = getImage();

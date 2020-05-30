@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EvilStar extends Actor
+public class EvilStar extends Foreground
 {
     private int dx = 5;
     public void act() 

@@ -11,6 +11,9 @@ public class Level1World extends World
 
     Counter counter = new Counter();
     Player player = new Player();
+    Background back = new Background();
+    Background back2 = new Background();
+
     public Counter getCounter() {
         return counter;
     }
@@ -18,30 +21,34 @@ public class Level1World extends World
     public Level1World()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        
+
         super(900, 900, 1,true); 
-        setPaintOrder(Foreground.class);
-            
-        
-        addObject(player, getWidth()/2, getHeight()-player.getImage().getHeight()/2);
+
+        setPaintOrder(Foreground.class, Background.class);
+
+        addObject(player, getWidth()/2, getHeight() - player.getImage().getHeight()/2);
         player.setRotation(-90); 
         player.getImage().scale(player.getImage().getWidth()/2, player.getImage().getHeight()/2);
 
         Text7 t = new Text7();
         addObject(counter,75,56);
         addObject(t,75,90);
-        //counter.setLocaation(69,32);
+
+        addObject(back, getWidth()/2, getHeight()/2);
+        addObject(back2, getWidth()/2, -getHeight()/2);
     }
 
     public void addAsteroid(){
-        if(Greenfoot.getRandomNumber(100) <= 20){
+        if(Greenfoot.getRandomNumber(100) <= 15){
             addObject(new Level1Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
         }
     }
 
     public void act() {
         addAsteroid();
+        if(back.getY() - back.getImage().getHeight()/2 >= getHeight()){
+            back.setLocation(getWidth()/2, -getHeight()/2);
+        }
     }
 }
-
 

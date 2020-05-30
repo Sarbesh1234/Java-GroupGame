@@ -5,7 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level1Asteroid extends Actor
+public class Level1Asteroid extends Foreground
 {
     private int speed = Greenfoot.getRandomNumber(5);
     private int a = 0;

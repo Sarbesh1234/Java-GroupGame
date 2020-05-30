@@ -17,19 +17,20 @@ public class StartScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 900, 1); 
-        
-         Text t = new Text();
+
+        Text t = new Text();
         addObject(t,getWidth()/2,getHeight()/2);
-        
-         Text3 t2 = new Text3();
+
+        Text3 t2 = new Text3();
         addObject(t2,450,600);
+
     }
-    
+
     public void act() {
         if(Greenfoot.isKeyDown("enter")) {
             Greenfoot.setWorld(new Level1World());
         }
-        
+
         if(Greenfoot.isKeyDown("space")) {
             Greenfoot.setWorld(new InstructionsScreen());
         }

@@ -1,6 +1,6 @@
 # README #
 
-**Names:**	Sarbesh 1, Nameer 2, Sriram 3
+**Names:**	Sarbesh , Nameer , Sriram 
 
 **Group:** 5
 
@@ -14,19 +14,19 @@ Write a paragraph here describing the game you want to make.  Describe how it is
 you want to include in your game.  Remember, any simple game can be scaled up with features and any complex
 game can be scaled down.
 
-A astroid shooter game, with multipile levels and enemies. And a boss
+A astroid shooter game, with multipile levels and enemies. And a boss at the very end.
 
 Game Controls:
 
-+ edit here
+Use mouse for movement and mouse click to shoot. 
 
 Game Elements:
 
-+ edit here
+Multiple levels,kill enemies, kill boss
 
 How to Win:
 
-+ edit here
+Kill the boss in the last level.
 
 ## Link Examples ##
 Provide links to examples of your game idea.  This can be a playable online game, screenshots, YouTube videos of gameplay, etc.
@@ -45,19 +45,46 @@ Put all your brainstorm ideas, strategy approaches, and class outlines here
 
 ## Development Journal ##
 
-Every day you work, keep track of it here.
+Sarbesh 5/20/2020 (25 minutes)
 
-**Name - Date (time spent)**
+New clases minor bugs, very minimal things
 
-Goal:  What are you trying to accomplish today?
+Sarbesh 5/21/2020 (15 minutes)
 
-Work accomplished:  Describe what you did today and how it went.
+Added astroid component, play movement works well, problem with laser, hoping to fix that
 
-**Name - Date (time spent)**
+Sarbesh 5/22/2020 (10 minutes)
 
-Goal:  What are you trying to accomplish today?
+Scaling images work well, reduced the sizes, need to get the actual game mechanics working
 
-Work accomplished:  Describe what you did today and how it went.
+Sarbesh 5/23/2020 (20 minutes)
+
+Continue working on on astroid issues, hoping to add levels and some new enemies
+
+Sarbesh 5/24/2020 (4 hours)
+
+Finished the whole base of the game. Removed some classes, made the code much simpler and easy to read. Rotation works well, with keyboard. I incoprated a whole start and instruction screen with texts
+that are very specific and easy to read. Added 3 levels to the game. Hoping to make each level differnt for the next day
+
+Sarbesh 5/25/2020 (6 hours)
+
+Different components in each level. Astroids are slower, in level 1. Added a whole new enemy that appears in level 2, the alien. The alien is a the same speed as the astroid, but there's a 1 percent chance
+each frame that the alien will spawn an evil laser. In level 3 I added a boss, with a health bar. It doesn't do anything yet. But everytime you hit the boss, the healthbar will decrease. I also added a counter
+with the score, and differnt texts that show what level your on. I added a game over screen and a win screen if you defeat the boss. Massive push that I made, and has the game pretty much done. Hoping to make the movement of player better.
+
+Sarbesh 5/26/2020(20 minutes)
+
+We changed the player movement, and used mouse to move and mouse click to shoot. We scaled some of the enmies so it looks better. Hoping to add an extra level and other features.
+
+Sarbesh 5/27/2020 (30 minutes)
+
+Fixed some astroid problems, also fixed some null exception errors, game runs smoothly. Boss also has movement and can shoot back as well.
+
+Sarbesh 5/28/2020 (10 minutes)
+
+Fixed laser shooting hoping to add some more things like a moving background, and possibly some lives.
+
+Sarbesh 5/29/2020 
 
 ***
 ***

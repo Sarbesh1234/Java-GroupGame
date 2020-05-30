@@ -45,7 +45,7 @@ public class Level1World extends World
     }
 
     public void addAsteroid(){
-        if(Greenfoot.getRandomNumber(100) <= 15){
+        if(Greenfoot.getRandomNumber(200) <= 15){
             addObject(new Level1Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
         }
     }

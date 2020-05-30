@@ -15,7 +15,7 @@ public class Explosion extends ExplodingBomb
 
     public Explosion(){
         GreenfootImage img = getImage();
-        img.scale(50,50);
+        img.scale(90,90);
         setImage(img);
     }
 

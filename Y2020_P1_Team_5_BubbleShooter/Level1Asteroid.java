@@ -9,6 +9,7 @@ public class Level1Asteroid extends Foreground
 {
     private int speed = Greenfoot.getRandomNumber(5);
     private int a = 0;
+    
     public void asteroidFunction() {
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
@@ -17,12 +18,12 @@ public class Level1Asteroid extends Foreground
             counter.addScore();
             getWorld().removeObject(this);
         } else if(isTouching(ExplodingBomb.class)){
+            getWorld().addObject(new Explosion(),this.getX(),this.getY());
             removeTouching(ExplodingBomb.class);
             Level1World myWorld = (Level1World)getWorld();
             Counter counter = myWorld.getCounter();
             counter.addScore();
             getWorld().removeObject(this);
-            spawnExplosion();
         } else {
             if(getY()>=getWorld().getHeight()-1) {
                 getWorld().removeObject(this);
@@ -45,10 +46,5 @@ public class Level1Asteroid extends Foreground
         this.getImage().scale(50,50);
     }
     
-    public void spawnExplosion(){
-        Explosion exp = new Explosion();
-        exp.setLocation(getX(),getY());
-        getWorld().removeObjects(getObjectsInRange(exp.getImage().getWidth(), Level1Asteroid.class));
-    }
 }
 

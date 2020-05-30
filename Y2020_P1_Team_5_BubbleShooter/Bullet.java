@@ -1,6 +1,6 @@
 import greenfoot.*;
 public class Bullet extends EvilStar{
-    private int speed = 10;
+    private int speed = 5;
     
     public void act(){
         scaleImage();
@@ -25,7 +25,7 @@ public class Bullet extends EvilStar{
     
     public void scaleImage(){
         if(getWorld().getObjects(Bullet.class).size() > 0){
-            this.getImage().scale(30,30);
+            this.getImage().scale(50,50);
         }
     }
     

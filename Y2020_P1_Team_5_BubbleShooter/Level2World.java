@@ -16,7 +16,7 @@ public class Level2World extends World
     public Counter getCounter() {
         return counter;
     }
-    
+
     public Lives getLives() {
         return l;
     }
@@ -26,7 +26,6 @@ public class Level2World extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 900, 1,true); 
 
-            
         
         addObject(player, getWidth()/2, getHeight()-player.getImage().getHeight()/2);
         player.setRotation(-90); 
@@ -41,25 +40,15 @@ public class Level2World extends World
     }
 
     
-    
     public void addAsteroid(){
-        if(Greenfoot.getRandomNumber(100) <= 20){
+        if(Greenfoot.getRandomNumber(200) <= 40){
             addObject(new Level2Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
-        }
-    }
-
-    public void addAlien(){
-        if(Greenfoot.getRandomNumber(100) <= 2){
-            alien.setRotation(180);
-            addObject(new Alien(), Greenfoot.getRandomNumber(getWidth()), 0);
         }
     }
 
     public void act() {
         addAsteroid();
-        //addAlien();
 
     }
 }
-
 

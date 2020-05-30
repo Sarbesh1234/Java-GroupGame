@@ -145,6 +145,7 @@ in general, classes
 25th May - Thought of many new ideas to be implemented later, as for now, game is solid and functioning well, but still not up to the mark.
 27th May - Finally fixed Asteroid spawning issue, implemented  new features such as Boss movement. Idea to use new images.
 28th May - Fixed Boss Laser Issue, though it still spawns too much. 
+29th May - Added ExplodingBomb subclass that works perfectly. Moving background is working, but still does not fully work. Other features are minor and mostly aesthetic.
 **Nameer - 18th May (10 minutes)**
 
 Goal: Modify Player class and add more classes. Understand bitbucket fully, including how to pull and push code.
@@ -195,6 +196,12 @@ Work accomplished: Made significant changes to the game classes, especially the 
 Goal: Fix Boss Laser shooting, add Points and Alien Shooting action.
 
 Work accomplished: Fixed Boss Laser shooting, and others, but still have many many more ideas. To be continued
+
+**Nameer - 29th May (1 hour 20 min+)**
+
+Goal: Try to implement new idea of Background moving, and another subclass of Player which has a 2% chance of spawning an exploding bomb
+
+Work accomplished: New Ideas such as Background moving, Explosion, and Exploding Bomb work so far. The new Level 3 has also been added, which will be coded later. 
 
 ***
 ***

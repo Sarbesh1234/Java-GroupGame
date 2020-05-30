@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Lives extends Foreground
 {
-    int lives = 5;
+    int lives = 10;
     
     public Lives() {
         setImage(new GreenfootImage("Lives Left: " + lives, 30,Color.PINK,Color.BLACK));       

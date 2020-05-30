@@ -89,7 +89,7 @@ public class Player extends Foreground
         if (Greenfoot.mouseClicked(null)) {
             if(getWorld().getObjects(Laser.class).size() == 0 && 
             getWorld().getObjects(ExplodingBomb.class).size() == 0){
-                if(Greenfoot.getRandomNumber(100) < 1){
+                if(Greenfoot.getRandomNumber(100) < 50){
                     ExplodingBomb ebomb = new ExplodingBomb();
                     ebomb.setRotation(getRotation());
                     getWorld().addObject(ebomb, getX(), getY() - getImage().getHeight()/2);

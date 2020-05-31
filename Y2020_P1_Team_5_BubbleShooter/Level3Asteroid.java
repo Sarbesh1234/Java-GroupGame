@@ -13,6 +13,7 @@ public class Level3Asteroid extends Foreground
     public void collision() {
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
+            Greenfoot.playSound("explosion.wav");
             Level3World myWorld = (Level3World)getWorld();
             Counter counter = myWorld.getCounter();
             counter.addScore();

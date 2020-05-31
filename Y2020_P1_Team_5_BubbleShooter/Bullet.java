@@ -13,6 +13,7 @@ public class Bullet extends EvilStar{
         if(isTouching(Laser.class)) {
             if(getWorld().getObjects(Text10.class).size() == 0) {
                 removeTouching(Laser.class);
+                Greenfoot.playSound("explosion.wav");
                 getWorld().removeObject(this);
             }
 

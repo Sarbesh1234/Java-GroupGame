@@ -20,11 +20,15 @@ public class WinScreen extends World
         Text10 t = new Text10();
         
         addObject(t,getWidth()/2,getHeight()/2);
+        
+        
     }
     
     public void act(){
         if(Greenfoot.isKeyDown("R")) {
             Greenfoot.setWorld(new StartScreen());
         }
+        
+        
     }
 }

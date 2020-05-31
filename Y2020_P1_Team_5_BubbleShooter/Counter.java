@@ -18,7 +18,7 @@ public class Counter extends Foreground
     {
         setImage(new GreenfootImage("Score: " + score+"/30", 30,Color.PINK,Color.BLACK));
 
-        if(score == 10) {
+        if(score == 2) {
             if(getWorld().getObjects(Text7.class).size() == 1) {
                 Greenfoot.setWorld(new Level2World());
             }else if (getWorld().getObjects(Text8.class).size() == 1) {

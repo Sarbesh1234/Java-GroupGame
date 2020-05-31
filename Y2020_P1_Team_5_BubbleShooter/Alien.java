@@ -19,12 +19,14 @@ public class Alien extends Foreground
             if(getWorld().getObjects(Text9.class).size() == 0) {
                 removeTouching(Laser.class);
                 Level3World myWorld = (Level3World)getWorld();
+                Greenfoot.playSound("explosion.wav");
                 Counter counter = myWorld.getCounter();
                 counter.addScore();
                 getWorld().removeObject(this);
             }else {
                 removeTouching(Laser.class);
                 Level4World myWorld = (Level4World)getWorld();
+                Greenfoot.playSound("explosion.wav");
                 Counter counter = myWorld.getCounter();
                 counter.addScore();
                 getWorld().removeObject(this);

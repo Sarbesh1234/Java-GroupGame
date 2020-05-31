@@ -41,12 +41,14 @@ public class EvilStar extends Foreground
             removeTouching(Laser.class);
             World world = getWorld();
             Level4World myWorld = (Level4World)world;
+            Greenfoot.playSound("399303__deleted-user-5405837__explosion-012.mp3");
             HealthBar healthbar = myWorld.getHealthBar();
             healthbar.loseHealth();
         } else if(isTouching(BigLaser.class)){
             removeTouching(BigLaser.class);
             World world = getWorld();
             Level4World myWorld = (Level4World)world;
+            Greenfoot.playSound("399303__deleted-user-5405837__explosion-012.mp3");
             HealthBar healthbar = myWorld.getHealthBar();
             healthbar.loseHealth();
         }

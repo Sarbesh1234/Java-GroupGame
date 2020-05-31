@@ -14,6 +14,8 @@ public class Level1Asteroid extends Foreground
     public void asteroidFunction() {
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
+            //Greenfoot.playSound("explosion.wav");
+            
             Level1World myWorld = (Level1World)getWorld();
             Counter counter = myWorld.getCounter();
             counter.addScore();

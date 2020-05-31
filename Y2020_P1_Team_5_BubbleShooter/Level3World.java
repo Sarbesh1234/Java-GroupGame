@@ -42,12 +42,14 @@ public class Level3World extends World
 
     public void addAsteroid(){
         if(Greenfoot.getRandomNumber(100) <= 20){
-            addObject(new Level3Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
+            Level3Asteroid asteroid3 = new Level3Asteroid();
+            addObject(asteroid3, Greenfoot.getRandomNumber(getWidth() - 
+            asteroid3.getImage().getWidth()/2), 0);
         }
     }
 
     public void addAlien(){
-        if(Greenfoot.getRandomNumber(200) <= 20){
+        if(Greenfoot.getRandomNumber(300) <= 20){
             alien.setRotation(180);
             addObject(new Alien(), Greenfoot.getRandomNumber(getWidth()), 0);
         }
@@ -60,7 +62,7 @@ public class Level3World extends World
 
     public void addWall(){
         for(int i = 0; i <= wallNumber; i++){
-            Wall wall = new Wall();
+            Barrel wall = new Barrel();
             wall.getImage().scale(50,50);
             int RandomX = Greenfoot.getRandomNumber(getWidth()/wall.getImage().getWidth());
             int RandomY = Greenfoot.getRandomNumber(getHeight()/wall.getImage().getHeight());

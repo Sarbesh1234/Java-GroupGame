@@ -1,4 +1,4 @@
-import greenfoot.*;
+;import greenfoot.*;
 public class Player extends Foreground
 {
     //Hello tessting
@@ -26,10 +26,10 @@ public class Player extends Foreground
     public void hitObjects(){
         if(getWorld().getObjects(Text8.class).size() == 0) {
             if(getOneIntersectingObject(Level1Asteroid.class) != null){
-            Level1World myWorld = (Level1World)getWorld();
-            Lives l = myWorld.getLives();
-            l.die();
-            removeTouching(Level1Asteroid.class);
+                Level1World myWorld = (Level1World)getWorld();
+                Lives l = myWorld.getLives();
+                l.die();
+                removeTouching(Level1Asteroid.class);
             }
         }
 
@@ -41,7 +41,7 @@ public class Player extends Foreground
                 removeTouching(Level2Asteroid.class);
             }
         }
-        
+
         if(getWorld().getObjects(Text11.class).size() == 1) {
             if(getOneIntersectingObject(Level3Asteroid.class) !=null) {
                 Level3World myWorld = (Level3World)getWorld();
@@ -57,16 +57,16 @@ public class Player extends Foreground
                 removeTouching(Level4Asteroid.class);
             }
         }
-        
+
         if(getWorld().getObjects(Text11.class).size() == 1) {
             if(getOneIntersectingObject(Alien.class) != null) {
-            Level3World myWorld = (Level3World)getWorld();
-            Lives l = myWorld.getLives();
-            l.die();
-            removeTouching(Alien.class);
+                Level3World myWorld = (Level3World)getWorld();
+                Lives l = myWorld.getLives();
+                l.die();
+                removeTouching(Alien.class);
+            }
         }
-        }
-        
+
         if(getWorld().getObjects(Text9.class).size() == 1) {
             if(getOneIntersectingObject(Alien.class) != null) {
                 Level4World myWorld = (Level4World)getWorld();
@@ -75,29 +75,22 @@ public class Player extends Foreground
                 removeTouching(Alien.class);
             }
         }
-        
+
         if(getOneIntersectingObject(Bullet.class) != null) {
-                Level4World myWorld = (Level4World)getWorld();
-                Lives l = myWorld.getLives();
-                l.die();
-                removeTouching(Bullet.class);
+            Level4World myWorld = (Level4World)getWorld();
+            Lives l = myWorld.getLives();
+            l.die();
+            removeTouching(Bullet.class);
         }
     }
 
     public void shoot(){
         MouseInfo m = Greenfoot.getMouseInfo();
         if (Greenfoot.mouseClicked(null)) {
-            if(getWorld().getObjects(Laser.class).size() == 0 && 
-            getWorld().getObjects(ExplodingBomb.class).size() == 0){
-                if(Greenfoot.getRandomNumber(100) < 50){
-                    ExplodingBomb ebomb = new ExplodingBomb();
-                    ebomb.setRotation(getRotation());
-                    getWorld().addObject(ebomb, getX(), getY() - getImage().getHeight()/2);
-                } else {
-                    Laser laser = new Laser();
-                    laser.setRotation(getRotation());
-                    getWorld().addObject(laser, getX(), getY() - getImage().getHeight()/2);
-                }
+            if(getWorld().getObjects(Laser.class).size() == 0){
+                Laser laser = new Laser();
+                laser.setRotation(getRotation());
+                getWorld().addObject(laser, getX(), getY() - getImage().getHeight()/2);
             }
         }
     }
@@ -115,8 +108,14 @@ public class Player extends Foreground
     }
 
     public void outOfBounds(){
-        if(getY()+h/2>getWorld().getHeight()) {
+        if(getY() + h/2 >= getWorld().getHeight()) {
             setLocation(getX(),getWorld().getHeight()-h/2);
+        } else if(getY() - getImage().getHeight()/2 <= 0){
+            setLocation(getX(), getImage().getHeight()/2);
+        } else if(getX() + getImage().getWidth()/2 >= getWorld().getWidth()){
+            setLocation(getWorld().getWidth() - getImage().getWidth()/2, getY());
+        } else if(getX() - getImage().getWidth()/2 <= 0){
+            setLocation(getImage().getWidth()/2, getY());
         }
     }
 }

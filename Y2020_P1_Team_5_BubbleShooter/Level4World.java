@@ -50,13 +50,15 @@ public class Level4World extends World
     }
 
     public void addAsteroid(){
-        if(Greenfoot.getRandomNumber(100) <= 7){
-            addObject(new Level4Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
+        if(Greenfoot.getRandomNumber(100) <= 15){
+            Level4Asteroid asteroid4 = new Level4Asteroid();
+            addObject(asteroid4, Greenfoot.getRandomNumber(getWidth() - 
+            asteroid4.getImage().getWidth()/2), 0);
         }
     }
 
     public void addAlien(){
-        if(Greenfoot.getRandomNumber(100) < 5){
+        if(Greenfoot.getRandomNumber(110) < 5){
             alien.setRotation(180);
             addObject(new Alien(), Greenfoot.getRandomNumber(getWidth()), 0);
         }

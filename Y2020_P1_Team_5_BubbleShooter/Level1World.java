@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1World extends World
 {
-
     Counter counter = new Counter();
     Player player = new Player();
     Background back = new Background();
@@ -41,20 +40,18 @@ public class Level1World extends World
         addObject(t,75,90);
 
         addObject(back, getWidth()/2, getHeight()/2);
-        addObject(back2, getWidth()/2, -getHeight()/2);
     }
 
     public void addAsteroid(){
         if(Greenfoot.getRandomNumber(200) <= 15){
-            addObject(new Level1Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
+            Level1Asteroid asteroid1 = new Level1Asteroid();
+            addObject(asteroid1, Greenfoot.getRandomNumber(getWidth() - 
+            asteroid1.getImage().getWidth()/2), 0);
         }
     }
 
     public void act() {
         addAsteroid();
-        if(back.getY() - back.getImage().getHeight()/2 >= getHeight()){
-            back.setLocation(getWidth()/2, -getHeight()/2);
-        }
     }
 }
 

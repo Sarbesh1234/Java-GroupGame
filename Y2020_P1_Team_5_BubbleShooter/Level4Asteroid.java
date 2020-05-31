@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 /**
  * Write a description of class Asteroid here.
  * 
@@ -16,7 +17,7 @@ public class Level4Asteroid extends Foreground
             Counter counter = myWorld.getCounter();
             counter.addScore();
             getWorld().removeObject(this);       
-        }else {
+        } else {
             if(getY()>=getWorld().getHeight()-1) {
                 getWorld().removeObject(this);
             }
@@ -30,7 +31,7 @@ public class Level4Asteroid extends Foreground
     }
 
     public void moveAsteroid(){
-        setLocation(getX(),getY() + speed + 1);
+        setLocation(getX(),getY() + speed);
     }
 }
 

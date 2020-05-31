@@ -26,5 +26,4 @@ public class Background extends Actor
         GreenfootImage img = getImage();
         img.scale(getWorld().getWidth(),getWorld().getHeight());
     }
-
 }

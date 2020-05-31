@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level2World extends World
 {
-
     Counter counter = new Counter();
     Player player = new Player();
     Alien alien = new Alien();
@@ -42,13 +41,14 @@ public class Level2World extends World
     
     public void addAsteroid(){
         if(Greenfoot.getRandomNumber(200) <= 40){
-            addObject(new Level2Asteroid(), Greenfoot.getRandomNumber(getWidth()), 0);
+            Level2Asteroid asteroid2 = new Level2Asteroid();
+            addObject(asteroid2, Greenfoot.getRandomNumber(getWidth() - 
+            asteroid2.getImage().getWidth()/2), 0);
         }
     }
 
     public void act() {
         addAsteroid();
-
     }
 }
 

@@ -11,7 +11,7 @@ public class EvilStar extends Foreground
     private int dx = 5;
     public void act() 
     {
-        if(Greenfoot.getRandomNumber(200) <= 1){
+        if(Greenfoot.getRandomNumber(100) <= 5){
             Bullet b = new Bullet();
             b.setRotation(getRotation());
             getWorld().addObject(b, getX(), getY() - getImage().getHeight()/2);
@@ -39,6 +39,12 @@ public class EvilStar extends Foreground
     public void touchLaser(){
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
+            World world = getWorld();
+            Level4World myWorld = (Level4World)world;
+            HealthBar healthbar = myWorld.getHealthBar();
+            healthbar.loseHealth();
+        } else if(isTouching(BigLaser.class)){
+            removeTouching(BigLaser.class);
             World world = getWorld();
             Level4World myWorld = (Level4World)world;
             HealthBar healthbar = myWorld.getHealthBar();

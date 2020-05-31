@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 /**
  * Write a description of class Asteroid here.
  * 
@@ -9,17 +10,10 @@ public class Level1Asteroid extends Foreground
 {
     private int speed = Greenfoot.getRandomNumber(5);
     private int a = 0;
-    
+
     public void asteroidFunction() {
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
-            Level1World myWorld = (Level1World)getWorld();
-            Counter counter = myWorld.getCounter();
-            counter.addScore();
-            getWorld().removeObject(this);
-        } else if(isTouching(ExplodingBomb.class)){
-            getWorld().addObject(new Explosion(),this.getX(),this.getY());
-            removeTouching(ExplodingBomb.class);
             Level1World myWorld = (Level1World)getWorld();
             Counter counter = myWorld.getCounter();
             counter.addScore();
@@ -39,12 +33,12 @@ public class Level1Asteroid extends Foreground
     }
 
     public void moveAsteroid(){
-        setLocation(getX(),getY() + speed + 1);
+        setLocation(getX(),getY() + speed + 3);
     }
 
     public void scaleAsteroid(){
         this.getImage().scale(50,50);
     }
-    
+
 }
 

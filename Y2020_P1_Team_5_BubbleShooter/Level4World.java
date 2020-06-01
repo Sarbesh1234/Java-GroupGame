@@ -18,7 +18,7 @@ public class Level4World extends World
     HealthBar healthbar = new HealthBar();
     public int evilStarY = 50;
     Lives l = new Lives();
-    int counterx = counter.getImage().getWidth()/2;
+    int counterx = counter.getImage().getWidth()/2 + 20;
     int countery = 56;
     int lifex = l.getImage().getWidth()/2;
     int lifey = 800;

@@ -12,7 +12,7 @@ public class Level1World extends World
     Player player = new Player();
     Lives l = new Lives();
     Text7 t = new Text7();
-    int counterx = counter.getImage().getWidth()/2;
+    int counterx = counter.getImage().getWidth()/2 + 20;
     int countery = 56;
     int lifex = l.getImage().getWidth()/2;
     int lifey = 800;

@@ -12,7 +12,7 @@ public class Level2World extends World
     Player player = new Player();
     Alien alien = new Alien();
     Lives l = new Lives();
-    int counterx = counter.getImage().getWidth()/2;
+    int counterx = counter.getImage().getWidth()/2 + 20;
     int countery = 56;
     int lifex = l.getImage().getWidth()/2;
     int lifey = 800;

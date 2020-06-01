@@ -14,7 +14,7 @@ public class Level3World extends World
     Alien alien = new Alien();
     Lives l = new Lives();
     private int wallNumber = 20;
-    int counterx = counter.getImage().getWidth()/2;
+    int counterx = counter.getImage().getWidth()/2 + 20;
     int countery = 56;
     int lifex = l.getImage().getWidth()/2;
     int lifey = 800;

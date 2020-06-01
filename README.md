@@ -147,6 +147,7 @@ in general, classes
 28th May - Fixed Boss Laser Issue, though it still spawns too much. 
 29th May - Added ExplodingBomb subclass that works perfectly. Moving background is working, but still does not fully work. Other features are minor and mostly aesthetic.
 30th May - Removed ExplodingBomb due to many techincal difficulties, instead added new subclasses called Barrel and BigLaser that serve different purposes
+31st May - Made sure all functions are working AND WE FINALLY HAVE A BACKGROUND! IT WORKS PERFECTTT!!
 **Nameer - 18th May (10 minutes)**
 
 Goal: Modify Player class and add more classes. Understand bitbucket fully, including how to pull and push code.
@@ -205,11 +206,17 @@ Goal: Try to implement new idea of Background moving, and another subclass of Pl
 
 Work accomplished: New Ideas such as Background moving, Explosion, and Exploding Bomb work so far. The new Level 3 has also been added, which will be coded later. 
 
-**Nameer - 30th May (1 hour+)**
+**Nameer - 30th May (1 hour 30+)**
 
 Goal: Try to make ExplodingBomb class work such that on collision with Asteroid, explosions are spawned. Make other techincal changes and try to get good gameplay, with a working background
 
 Work accomplished: ExplodingBomb was too tough to complete, so new classes have been formed such as Barrel and BigLaser, both of which serve different purposes. Background still does not work
 Now only game sounds remain. So far game looks solid.
+
+**Nameer - 31st May (3 hours+)**
+
+Goal: Make sure all classes are working fine, make sure to add sounds, and if possible, a working background. In general, game should work with NO errors.
+
+Work accomplished: Game HAS BEEN FINISHED! We finally figured out the moving background and it works perfect. The 2 weeks of hard effort has finally paid off!
 ***
 ***

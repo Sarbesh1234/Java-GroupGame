@@ -56,7 +56,7 @@ public class Level2World extends World
         if(Greenfoot.getRandomNumber(200) <= 40){
             Level2Asteroid asteroid2 = new Level2Asteroid();
             addObject(asteroid2, 
-                Greenfoot.getRandomNumber(getWidth() - asteroid2.getImage().getWidth())
+                Greenfoot.getRandomNumber(getWidth() - 2*asteroid2.getImage().getWidth())
                 + asteroid2.getImage().getWidth(), 0);
         }
     }

@@ -70,7 +70,7 @@ public class Level4World extends World
         if(Greenfoot.getRandomNumber(100) <= 15){
             Level4Asteroid asteroid4 = new Level4Asteroid();
             addObject(asteroid4, 
-                Greenfoot.getRandomNumber(getWidth() - asteroid4.getImage().getWidth())
+                Greenfoot.getRandomNumber(getWidth() - 2*asteroid4.getImage().getWidth())
                 + asteroid4.getImage().getWidth(), 0);
         }
     }

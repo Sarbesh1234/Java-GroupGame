@@ -11,7 +11,7 @@ public class EvilStar extends Foreground
     private int dx = 5;
     public void act() 
     {
-        if(Greenfoot.getRandomNumber(150) <= 5){
+        if(Greenfoot.getRandomNumber(200) <= 5){
             Bullet b = new Bullet();
             b.setRotation(getRotation());
             getWorld().addObject(b, getX(), getY() - getImage().getHeight()/2);

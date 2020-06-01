@@ -6,7 +6,7 @@
 
 **Period:**	1
 
-**Game Title:** Your Title (can always change it later)
+**Game Title:** Astroid Shooter Game (can always change it later)
 
 ## Game Proposal ##
 
@@ -84,7 +84,18 @@ Sarbesh 5/28/2020 (10 minutes)
 
 Fixed laser shooting hoping to add some more things like a moving background, and possibly some lives.
 
-Sarbesh 5/29/2020 
+Sarbesh 5/29/2020 (20 minutes)
+
+Worked a bit on the sounds, added two sound affects that work well very easy to do. Hoping tommorow to finish the game, make everything complete and organized, and fix some bugs.
+
+Sarbesh 5/30/2020 (10 minutes)
+
+Removed some classes that didn't work, created big laser, we have to finish the game tommorow, and fix some last minute bugs.
+
+Sarbesh 5/31/2020 (3.5 hours)
+
+Finished the whole game finally :) Inputted the big laser, and works very well, with a low chance of spawning, added an extra sound effect, cleaned up the game over and win screen. Made some finishing touches
+with the code. It's all organized, and its working very well. I'm super proud of what me and my team did. 
 
 ***
 ***

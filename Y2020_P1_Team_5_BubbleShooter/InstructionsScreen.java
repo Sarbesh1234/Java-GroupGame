@@ -5,25 +5,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class InstructionsScreen extends World
+public class InstructionsScreen extends GameWorld
 {
-    
-    
+
     public InstructionsScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 900, 1); 
-        
+        super(width, height, 1, false); 
+
         Text4 t2 = new Text4();
         addObject(t2,450,300);
-        
+
         Text5 t3 = new Text5();
         addObject(t3,450,400);
-        
+
         Text6 t4 = new Text6();
         addObject(t4,450,500);
     }
-    
+
     public void act() {
         if(Greenfoot.isKeyDown("enter")) {
             Greenfoot.setWorld(new Level1World());

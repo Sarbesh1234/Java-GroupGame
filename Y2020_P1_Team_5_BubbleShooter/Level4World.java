@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 
-public class Level4World extends World
+public class Level4World extends GameWorld
 {
     Counter counter = new Counter();
     Player player = new Player();
@@ -44,7 +44,7 @@ public class Level4World extends World
 
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 900, 1, false); 
+        super(width, height, 1, false);       
         setPaintOrder(Foreground.class, Background.class);
         addObject(player, getWidth()/2, getHeight()-player.getImage().getHeight()/2);
         player.setRotation(-90); 

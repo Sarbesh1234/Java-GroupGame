@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WinScreen extends World
+public class WinScreen extends GameWorld
 {
     /**
      * Constructor for objects of class WinScreen.
@@ -18,7 +18,7 @@ public class WinScreen extends World
     public WinScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 900, 1); 
+        super(width, height, 1, false); 
 
         Text10 t = new Text10();
 

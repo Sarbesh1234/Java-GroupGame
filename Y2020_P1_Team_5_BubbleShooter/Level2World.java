@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level2World extends World
+public class Level2World extends GameWorld
 {
     Counter counter = new Counter();
     Player player = new Player();
@@ -33,7 +33,7 @@ public class Level2World extends World
     public Level2World()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 900, 1,false); 
+        super(width, height, 1, false); 
 
         setPaintOrder(Foreground.class, Background.class);
 

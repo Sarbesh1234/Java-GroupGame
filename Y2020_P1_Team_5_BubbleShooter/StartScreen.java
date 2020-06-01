@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class StartScreen extends World
+public class StartScreen extends GameWorld
 {
 
     /**
@@ -15,15 +15,13 @@ public class StartScreen extends World
      */
     public StartScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 900, 1); 
+        super(width, height, 1, false); 
 
         Text t = new Text();
         addObject(t,getWidth()/2,getHeight()/2);
 
         Text3 t2 = new Text3();
         addObject(t2,450,600);
-
     }
 
     public void act() {

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level1World extends World
+public class Level1World extends GameWorld
 {
     Counter counter = new Counter();
     Player player = new Player();
@@ -33,7 +33,7 @@ public class Level1World extends World
     public Level1World()
     {    
 
-        super(900, 900, 1,false); 
+        super(width, height, 1, false);  
 
         setPaintOrder(Foreground.class, Background.class);
 
@@ -44,7 +44,7 @@ public class Level1World extends World
         addObject(counter,counterx, countery);
         addObject(l,lifex, lifey);
         addObject(t,tx, ty);
-        
+
         Background back = new Background();
         addObject(back, backx, backy);
         Background back2 = new Background();

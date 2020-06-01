@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HealthBar extends Foreground
+public class HealthBar extends EvilStar
 {
     int health = 6;
     int healthBarWidth = 80;
@@ -34,7 +34,6 @@ public class HealthBar extends Foreground
         myImage.drawRect(0,0,healthBarWidth+1,healthBarHeight+1);
         myImage.setColor(Color.RED);
         myImage.fillRect(1,1,health*pixelsPerHealthPoint,healthBarHeight);
-        
     }
     
     public void loseHealth() {

@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameOver extends World
 {
-
+    int tx = 450;
+    int ty = 800;
+    int t2x = getWidth()/2;
+    int t2y = getHeight()/2 - 200;
     /**
      * Constructor for objects of class GameOver.
      * 
@@ -23,7 +26,10 @@ public class GameOver extends World
         addObject(s,getWidth()/2,getHeight()/2);
         
         GameOverText t = new GameOverText();
-        addObject(t,450,800);
+        addObject(t,tx, ty);
+        
+        Text12 t2 = new Text12();
+        addObject(t2, t2x, t2y);
     }
     
     public void act(){

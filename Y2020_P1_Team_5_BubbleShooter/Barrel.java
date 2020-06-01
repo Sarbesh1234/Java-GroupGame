@@ -18,6 +18,12 @@ public class Barrel extends Foreground
         if(getOneIntersectingObject(Laser.class) != null){
             removeTouching(Laser.class);
             getWorld().removeObject(this);
+            Greenfoot.playSound("118693__blackie666__fx9.wav");
+        } else if(isTouching(BigLaser.class)) {
+            if(getWorld().getObjects(Text9.class).size() == 0) {
+                Greenfoot.playSound("explosion.wav");
+                getWorld().removeObject(this);
+            }
         }
-    }   
+    } 
 }

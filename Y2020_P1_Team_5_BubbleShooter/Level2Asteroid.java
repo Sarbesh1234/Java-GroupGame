@@ -14,12 +14,17 @@ public class Level2Asteroid extends Foreground
 
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
+            Greenfoot.playSound("118693__blackie666__fx9.wav");
+            Level2World myWorld = (Level2World)getWorld();
+            Counter counter = myWorld.getCounter();
+            counter.addScore();
+            getWorld().removeObject(this);
+        } else if(isTouching(BigLaser.class)){
             Greenfoot.playSound("explosion.wav");
             Level2World myWorld = (Level2World)getWorld();
             Counter counter = myWorld.getCounter();
             counter.addScore();
             getWorld().removeObject(this);
-
         } else {
             if(getY()>=getWorld().getHeight()-1) {
                 getWorld().removeObject(this);

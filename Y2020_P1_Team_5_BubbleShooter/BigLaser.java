@@ -1,3 +1,4 @@
+import greenfoot.*;
 /**
  * Write a description of class BigLaser here.
  * 
@@ -6,25 +7,31 @@
  */
 public class BigLaser  extends Player
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private int speed = 20;
 
-    /**
-     * Constructor for objects of class BigLaser
-     */
-    public BigLaser()
-    {
+    public void act(){
+        moveBLaser();
+        outOfWorld();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void collision() {
+        Actor EvilStar = getOneIntersectingObject(EvilStar.class);
+
+        if(EvilStar!=null) {
+            World world = getWorld();
+            Level4World myWorld = (Level4World)world;
+            HealthBar healthbar = myWorld.getHealthBar();
+            healthbar.loseHealth();
+        }
+    }
+
+    public void moveBLaser(){
+        move(speed);
+    }
+
+    public void outOfWorld(){
+        if(getY() <= 0 || getY()>=getWorld().getHeight()-1 || getX()>=getWorld().getWidth()-1 || getX()<=0){
+            getWorld().removeObject(this);
+        }
     }
 }

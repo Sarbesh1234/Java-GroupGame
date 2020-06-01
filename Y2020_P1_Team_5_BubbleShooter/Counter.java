@@ -9,16 +9,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Counter extends Foreground
 {
     int score = 0;
-    
+
     public Counter() {
-        setImage(new GreenfootImage("Score: " + score+"/20", 30,Color.PINK,Color.BLACK));       
+        setImage(new GreenfootImage("Score: " + score+"/15 to next lvl", 30,Color.PINK,Color.BLACK));       
     }
 
     public void act() 
     {
-        setImage(new GreenfootImage("Score: " + score+"/30", 30,Color.PINK,Color.BLACK));
-
-        if(score == 2) {
+        setImage(new GreenfootImage("Score: " + score+"/15 to next lvl", 30,Color.PINK,Color.BLACK));
+        if(score == 15) {
             if(getWorld().getObjects(Text7.class).size() == 1) {
                 Greenfoot.setWorld(new Level2World());
             }else if (getWorld().getObjects(Text8.class).size() == 1) {

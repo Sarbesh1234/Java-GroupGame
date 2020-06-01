@@ -87,10 +87,16 @@ public class Player extends Foreground
     public void shoot(){
         MouseInfo m = Greenfoot.getMouseInfo();
         if (Greenfoot.mouseClicked(null)) {
-            if(getWorld().getObjects(Laser.class).size() == 0){
-                Laser laser = new Laser();
-                laser.setRotation(getRotation());
-                getWorld().addObject(laser, getX(), getY() - getImage().getHeight()/2);
+            if(Greenfoot.getRandomNumber(100) <= 3 && getWorld().getObjects(BigLaser.class).size() == 0){
+                BigLaser blaser = new BigLaser();
+                getWorld().addObject(blaser, getX(), getY()  - getImage().getHeight()/2);
+                blaser.setRotation(getRotation());
+            } else {
+                if(getWorld().getObjects(Laser.class).size() == 0){
+                    Laser laser = new Laser();
+                    getWorld().addObject(laser, getX(), getY()  - getImage().getHeight()/2);
+                    laser.setRotation(getRotation());
+                }
             }
         }
     }

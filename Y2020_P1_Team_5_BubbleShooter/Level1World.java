@@ -10,23 +10,30 @@ public class Level1World extends World
 {
     Counter counter = new Counter();
     Player player = new Player();
-    Background back = new Background();
-    Background back2 = new Background();
     Lives l = new Lives();
-
+    Text7 t = new Text7();
+    int counterx = counter.getImage().getWidth()/2;
+    int countery = 56;
+    int lifex = l.getImage().getWidth()/2;
+    int lifey = 800;
+    int tx = 75;
+    int ty = 90;
+    int backx = getWidth()/2;
+    int backy = getHeight()/2;
+    int back2x = getWidth()/2;
+    int back2y = -getHeight()/2;
     public Counter getCounter() {
         return counter;
     }
-    
-     public Lives getLives() {
+
+    public Lives getLives() {
         return l;
     }
 
     public Level1World()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
 
-        super(900, 900, 1,true); 
+        super(900, 900, 1,false); 
 
         setPaintOrder(Foreground.class, Background.class);
 
@@ -34,19 +41,22 @@ public class Level1World extends World
         player.setRotation(-90); 
         player.getImage().scale(player.getImage().getWidth()/2, player.getImage().getHeight()/2);
 
-        Text7 t = new Text7();
-        addObject(counter,75,56);
-        addObject(l,90,800);
-        addObject(t,75,90);
-
-        addObject(back, getWidth()/2, getHeight()/2);
+        addObject(counter,counterx, countery);
+        addObject(l,lifex, lifey);
+        addObject(t,tx, ty);
+        
+        Background back = new Background();
+        addObject(back, backx, backy);
+        Background back2 = new Background();
+        addObject(back2, back2x, back2y);
     }
 
     public void addAsteroid(){
         if(Greenfoot.getRandomNumber(200) <= 15){
             Level1Asteroid asteroid1 = new Level1Asteroid();
-            addObject(asteroid1, Greenfoot.getRandomNumber(getWidth() - 
-            asteroid1.getImage().getWidth()/2), 0);
+            addObject(asteroid1, 
+                Greenfoot.getRandomNumber(getWidth() - asteroid1.getImage().getWidth())
+                + asteroid1.getImage().getWidth(), 0);
         }
     }
 

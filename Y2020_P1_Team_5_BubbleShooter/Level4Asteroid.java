@@ -13,11 +13,17 @@ public class Level4Asteroid extends Foreground
     public void collision() {
         if(isTouching(Laser.class)) {
             removeTouching(Laser.class);
-            Greenfoot.playSound("explosion.wav");
+            Greenfoot.playSound("118693__blackie666__fx9.wav");
             Level4World myWorld = (Level4World)getWorld();
             Counter counter = myWorld.getCounter();
             counter.addScore();
             getWorld().removeObject(this);       
+        } else if(isTouching(BigLaser.class)){
+            Greenfoot.playSound("explosion.wav");
+            Level4World myWorld = (Level4World)getWorld();
+            Counter counter = myWorld.getCounter();
+            counter.addScore();
+            getWorld().removeObject(this);
         } else {
             if(getY()>=getWorld().getHeight()-1) {
                 getWorld().removeObject(this);

@@ -12,14 +12,18 @@ public class Background extends Actor
      * Act - do whatever the Background wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int speed = 3;
+    private int speed = 5;
     public Background(){
-
+        
     }
 
     public void act() 
     {
         setLocation(getX(), getY() + speed);
+        
+        if(getY() - getImage().getHeight() / 2 >= getWorld().getHeight()){
+            setLocation(getWorld().getWidth()/2, -getImage().getHeight() / 2);
+        }
     }
 
     protected void addedToWorld(World world){

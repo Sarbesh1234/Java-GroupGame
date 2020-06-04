@@ -21,7 +21,7 @@ public class Level4World extends GameWorld
     int counterx = counter.getImage().getWidth()/2 + 20;
     int countery = 56;
     int lifex = l.getImage().getWidth()/2;
-    int lifey = 800;
+    int lifey = getHeight() - l.getImage().getHeight()/2;
     int tx = 75;
     int ty = 90;
     int backx = getWidth()/2;
@@ -43,8 +43,7 @@ public class Level4World extends GameWorld
     public Level4World()
 
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(width, height, 1, false);       
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.     
         setPaintOrder(Foreground.class, Background.class);
         addObject(player, getWidth()/2, getHeight()-player.getImage().getHeight()/2);
         player.setRotation(-90); 

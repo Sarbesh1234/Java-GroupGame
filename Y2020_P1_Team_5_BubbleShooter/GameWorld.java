@@ -8,27 +8,18 @@ import javax.swing.JOptionPane;
  */
 public class GameWorld extends World
 {
-    String x = JOptionPane.showInputDialog("Enter width of World");
-    String y = JOptionPane.showInputDialog("Enter height of World"); 
-    int wid = Integer.parseInt(x);
-    int hei = Integer.parseInt(y);
-    public static int width = Integer.parseInt(wid);
-    public static int height = Integer.parseInt(hei);
+    public static int width = 500;
+    public static int height = 800;
     /**
      * Constructor for objects of class GameWorld.
      * 
      */
     public GameWorld()
-    {    
-        this(width, height, 1, false);
-
+    {          
+        super(width, height, 1, false);
     }
 
-    public GameWorld(int wid, int hei, int size){
-        super(wid, hei, size); 
-    }
-
-    public GameWorld(int wid, int hei, int size, boolean bounded){
-        super(wid, hei, size, bounded); 
+    public void act(){
+        
     }
 }

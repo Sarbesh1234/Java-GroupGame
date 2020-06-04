@@ -16,7 +16,7 @@ public class Text6 extends Foreground
     private String text2;
     
     public Text6() {
-        text = "Click Enter To Start Game";
+        text = "Press Enter To Start Game";
         font =20;
         foreground = Color.RED;
         background = Color.ORANGE;

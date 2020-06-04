@@ -17,7 +17,7 @@ public class Level3World extends GameWorld
     int counterx = counter.getImage().getWidth()/2 + 20;
     int countery = 56;
     int lifex = l.getImage().getWidth()/2;
-    int lifey = 800;
+    int lifey = getHeight() - l.getImage().getHeight()/2;
     int tx = 75;
     int ty = 90;
     int backx = getWidth()/2;
@@ -35,7 +35,6 @@ public class Level3World extends GameWorld
     public Level3World()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(width, height, 1, false);
         setPaintOrder(Foreground.class, Background.class);
         addWall();
 

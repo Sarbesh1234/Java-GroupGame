@@ -11,7 +11,6 @@ public class InstructionsScreen extends GameWorld
     public InstructionsScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(width, height, 1, false); 
 
         Text4 t2 = new Text4();
         addObject(t2,450,300);

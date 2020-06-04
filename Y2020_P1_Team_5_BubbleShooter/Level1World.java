@@ -15,7 +15,7 @@ public class Level1World extends GameWorld
     int counterx = counter.getImage().getWidth()/2 + 20;
     int countery = 56;
     int lifex = l.getImage().getWidth()/2;
-    int lifey = 800;
+    int lifey = getHeight() - l.getImage().getHeight()/2;
     int tx = 75;
     int ty = 90;
     int backx = getWidth()/2;
@@ -32,8 +32,7 @@ public class Level1World extends GameWorld
 
     public Level1World()
     {    
-
-        super(width, height, 1, false);  
+ 
 
         setPaintOrder(Foreground.class, Background.class);
 

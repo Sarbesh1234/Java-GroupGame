@@ -16,7 +16,7 @@ public class Text extends Foreground
     private String text2;
     
     public Text() {
-        text = "Click Enter to Play";
+        text = "Press Enter to Play";
         font = 55;
         foreground = Color.BLUE;
         background = Color.GREEN;
